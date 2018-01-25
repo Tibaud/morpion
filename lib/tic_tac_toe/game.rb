@@ -18,18 +18,14 @@ module TicTacToe
       Merci à #{current_player.name} de choisir une position (de 1 à 9)
       "
     end
-
-
-    # On intercepte la saisie du joueur
+    # On intercepte la saisie du joueur et on regarde si c'est un choix valable
     def get_move(human_move = gets.chomp)
+        while not ["1", "2", "3", "4", "5", "6", "7", "8", "9"].include?(human_move)
+        puts "Choix non valide! De 1 à 9 on a dit !"
+        human_move = gets.chomp
+        end
 
-      while not ["1", "2", "3", "4", "5", "6", "7", "8", "9"].include?(human_move)
-      puts "Choix non valide! De 1 à 9 on a dit !"
-      human_move = gets.chomp
-end
-human_move_to_coordinate(human_move)
-
-
+    human_move_to_coordinate(human_move)
     end
     # On prévient en cas de fin de partie
     def game_over_message
@@ -56,8 +52,8 @@ human_move_to_coordinate(human_move)
         x, y = get_move
         board.set_cell(x, y, current_player.color)
         if board.game_over
-          puts game_over_message
           board.formatted_grid
+          puts game_over_message
           return
         else
           switch_players
