@@ -1,32 +1,25 @@
 # Morpions
 
-To experiment the game, execute `ex/gametest.rb`.
+Pour tester le jeu --> `ex/gametest.rb`.
+Tu peux trouver les classes board,cell, player et game dans le dossier lib/tic_tac_toe/
 
-That game:
-1/ Ask the name of the two players
-2/ Randomly define who will play first
-3/ Show a 9 row grid and ask player 1 for a moove
-4/ switch players till a winning condition matches
+Ce que le jeu fait:
+1/ Il demande le nom de chaque joueur
+2/ Il tire au hasard celui qui commence
+3/ Il montre la grille et offre le choix de cases 1 à 9
+4/ Passe au tour suivant en changeant de joueur tant qu'il n'y a pas de victoire
 
 
-## Installation
+## Installation et tests
 
-Add this line to your application's Gemfile:
+Il faut ajouter
 
 ```ruby
 gem 'tic_tac_toe'
 ```
 
-And then execute:
-
+Puis exécuter:
     $ bundle
 
-Or install it yourself as:
-
+Ou installer toi même:
     $ gem install tic_tac_toe
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).

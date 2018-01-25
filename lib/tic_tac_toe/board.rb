@@ -1,7 +1,7 @@
 module TicTacToe
   class Board
     attr_reader :grid
-    # On crée une grille vide
+    # On pose la grille
     def initialize(input = {})
       @grid = input.fetch(:grid, default_grid)
     end
