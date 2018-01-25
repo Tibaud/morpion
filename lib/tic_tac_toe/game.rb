@@ -15,7 +15,8 @@ module TicTacToe
     # On indique  quel joueur joue et ce qu'il doit faire
     def solicit_move
       "
-      Merci à #{current_player.name} de choisir une position 1-9"
+      Merci à #{current_player.name} de choisir une position (de 1 à 9)
+      "
     end
     # On intercepte la saisie du joueur
     def get_move(human_move = gets.chomp)
@@ -35,7 +36,9 @@ module TicTacToe
     # On indique qui commence à jouer
     def play
       puts "
-      Trop de chance #{current_player.name}!! Tu commences la partie"
+      TROP DE CHANCE #{current_player.name}!! Tu commences la partie
+      "
+      sleep(1)
       # On lance la grille vide et l'invitation au jeu, ou le message de fin de partie, ou en change le joueur en cours
       while true
         board.formatted_grid

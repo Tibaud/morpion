@@ -13,7 +13,7 @@ module TicTacToe
     def set_cell(x, y, value)
       get_cell(x, y).value = value
     end
-    # Méthode pour savoir si il y a victoire, égalité, ou partie en cours (false)
+      # Méthode pour savoir si il y a victoire, égalité, ou partie en cours (false)
     def game_over
       return :winner if winner?
       return :draw if draw?
@@ -22,7 +22,7 @@ module TicTacToe
 
     def formatted_grid
       grid.each do |row|
-        puts row.map { |cell| cell.value.empty? ? "_" : cell.value }.join(" ")
+        puts row.map { |cell| cell.value.empty? ? " • " : cell.value }.join("║")
       end
     end
 

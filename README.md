@@ -2,6 +2,12 @@
 
 To experiment the game, execute `ex/gametest.rb`.
 
+That game:
+1/ Ask the name of the two players
+2/ Randomly define who will play first
+3/ Show a 9 row grid and ask player 1 for a moove
+4/ switch players till a winning condition matches
+
 
 ## Installation
 
